@@ -4,7 +4,7 @@ struct Node
 {
     int data;
 
-    struct node *next;
+    struct Node *next;
 };
 
 void display(struct Node *head)
@@ -39,7 +39,7 @@ struct Node * insertAtIndex(struct Node *head, int data, int index){
 
     while (i!=index-1)
     {
-        p = p->next;
+        p=p->next;
         i++;
     }
     ptr->data = data;
