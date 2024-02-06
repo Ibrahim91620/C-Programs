@@ -33,17 +33,17 @@ void insert(int x)
     }
 }
 
-void traverse()
+void display()
 {
     if (head != NULL)
 
     {
-        struct node *p;
-        p = head;
-        while (p!= NULL)
+        struct node *e;
+        e = head;
+        while (e!= NULL)
         {
-            printf("%d\n", p->data);
-            p = p->next;
+            printf("%d\n", e->data);
+            e = e->next;
         }
     }
     else
@@ -84,15 +84,13 @@ int main()
     int choice;
    
     int num;
-    traverse();
+  
 
     insert(34);
-    insert(56);
-    traverse();
-    delete_from_end();
-    traverse();
-    delete_from_end();
-    traverse();
+    insert(45);
+    display();
+    
+  
     // while (1)
     // {
     //     printf("Enter a choice\n");
