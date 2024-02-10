@@ -88,6 +88,7 @@ int main()
 
     insert(34);
     insert(45);
+    insert(67);
     display();
     
   
