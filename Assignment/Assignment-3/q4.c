@@ -1,10 +1,11 @@
 #include<stdio.h>
 int main(){
 
-  int a[5]={3,4,6,26,23},large,small;
-  for (int i = 0; i < 5; i++)
+  int a[5]={3,4,6,26,29},large,small;
+  large=small=a[0];
+  for (int i = 1; i < 5; ++i)
   {
- large=small=a[0];
+ 
     if (a[i]>large)
     {
         large=a[i];
