@@ -9,10 +9,20 @@ struct Node{
 	struct Node *next;
 };
 
+int sizeoflist(struct Node *temp){
+	int count=0; 
+	while (temp!=NULL)
+	{
+		count++;
+		temp=temp->next;
+	}
 
+	return count;
+	
+}
 
 void display(struct Node *head){
-
+ 
 
 	if(head!=NULL){
 		
@@ -27,9 +37,9 @@ void display(struct Node *head){
 			printf("ELEMENT is %d\n",p->data);
 
 			p=p->next;
-
+            
 		}
-
+	
 	
 	}else{
 
@@ -68,7 +78,7 @@ void main(){
    third->next=NULL;
    printf("Linked list before Insertion:-\n");
    display(head);
-  
+   printf("the size of linked list is %d\n ",sizeoflist(head)); 
     head=insertatBeginning(head,23);
 	printf("linked list after insertion:\n");
 	display(head);

@@ -17,7 +17,7 @@ void display(){
     struct node *p;
     p=top;
     if(top==0){
-        printf("stack is underflow");
+        printf("stack is underflow\n");
 
     }else{
         while (p!=NULL)
@@ -52,7 +52,7 @@ void pop(){
     
 }
 int main(){
-
+    display();
     push(5);
     push(6);
     display();

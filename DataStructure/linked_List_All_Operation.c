@@ -10,9 +10,11 @@ struct node
 };
  struct node *head = NULL;
 
-void insert(int x)
+void insert()
 {
-
+  int x;
+  printf("enter the data");
+  scanf("%d",&x);
     struct node *newNode;
     newNode = (struct node *)malloc(sizeof(struct node));
     newNode->data = x;
@@ -42,7 +44,7 @@ void display()
         e = head;
         while (e!= NULL)
         {
-            printf("%d\n", e->data);
+            printf("%d ->", e->data);
             e = e->next;
         }
     }
@@ -71,7 +73,10 @@ void delete_from_end()
         while (p->next->next!= NULL)
         {
             p = p->next;
-        }
+        }  
+
+
+        
         free(p->next);
         p->next=NULL;
     
@@ -86,9 +91,9 @@ int main()
     int num;
   
 
-    insert(34);
-    insert(45);
-    insert(67);
+    insert();
+    insert();
+    insert();
     display();
     
   

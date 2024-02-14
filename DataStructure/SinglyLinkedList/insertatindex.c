@@ -92,7 +92,7 @@ int main(){
    third->data=14;
    third->next=NULL;
 
-     insertatindex(2,45,&head);
+     insertatindex(3,45,&head);
     display(head);
     
 
