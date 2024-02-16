@@ -51,6 +51,7 @@ void pop(){
     }
     
 }
+
 int main(){
     display();
     push(5);

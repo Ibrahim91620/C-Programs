@@ -23,9 +23,12 @@ else{
 }
 }
 
+struct Node *head=NULL;
+
 void insertatend(struct Node *head,int data){
     struct Node *newNode;
      newNode=(struct Node *)malloc(sizeof(struct Node));
+     
     struct Node *p;
     p=head;
     newNode->data=data;
@@ -37,6 +40,9 @@ void insertatend(struct Node *head,int data){
     newNode->next=NULL;
 }
 
+
+   
+
 int main(){
 
 struct Node *firstNode;
@@ -46,7 +52,7 @@ firstNode=(struct Node *)malloc(sizeof(struct Node));
 secondNode=(struct Node *)malloc(sizeof(struct Node));
 thirdNode=(struct Node *)malloc(sizeof(struct Node));
 
-firstNode->data=23;
+firstNode->data=45;
 firstNode->next=secondNode;
 
 secondNode->data=34;
@@ -55,9 +61,11 @@ secondNode->next=thirdNode;
 thirdNode->data=55;
 thirdNode->next=NULL;
 traversal(firstNode);
+sort();
+// insertatend(firstNode,45);
 
-insertatend(firstNode,45);
-printf("after insertion at end node\n ");
+
+// printf("after insertion at end node\n ");
 traversal(firstNode);
 
 

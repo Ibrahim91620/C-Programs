@@ -53,6 +53,27 @@ void display()
         printf("The linked list is empty\n");
     }
 }
+void sort(){
+    struct node *i,*j;
+    int temp;
+    for (i= head;i->next!=NULL; i=i->next)
+    {
+        for ( j = i->next; j->next!=NULL; j=j->next)
+        {
+            if (i->data>j->data)
+            {
+                temp=i->data;
+                i->data=j->data;
+                j->data=temp;
+            }
+            
+        }
+        
+       
+    }
+    
+}
+   
 
 void delete_from_end()
 {
@@ -94,6 +115,8 @@ int main()
     insert();
     insert();
     insert();
+    display();
+    sort();
     display();
     
   

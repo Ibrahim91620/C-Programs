@@ -38,6 +38,13 @@ void insertatbegin(int x){
     head=newNode;
     
 }
+
+    
+    
+
+
+
+
    
    
 
@@ -48,11 +55,14 @@ void insertatbegin(int x){
 int main(){
 
 insertatbegin(55);
-insertatbegin(50);
-traversal();
+insertatbegin(67);
+// traversal();
 
 insertatbegin(45);
-printf("after insertion at beginning node\n ");
+// printf("after insertion at beginning node\n ");
+// traversal();
+sort();
+
 traversal();
 
 

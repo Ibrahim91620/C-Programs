@@ -35,7 +35,7 @@ void display(){
   temp=front;
   while (temp!=NULL)
   {
-   printf(" <-%d",temp->data);
+   printf(" <-%d\n",temp->data);
    temp=temp->next;
   }
 
@@ -62,16 +62,33 @@ void pop(){
     
 
 }
+void peek(){
+
+    if (front==0 && rear==0)
+    {
+       printf("link list is empty ");
+    }else{
+
+        printf("%d",rear->data);
+    }
+    
+  
+
+  
+
+
+}
 
 
 int main(){
    
    push(23);
    push(12);
-   
+   push(26);
    display();
     pop();
+    peek();
     display();
-
+  
 return 0;
 }
