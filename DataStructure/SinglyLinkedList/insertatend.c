@@ -28,7 +28,6 @@ struct Node *head=NULL;
 void insertatend(struct Node *head,int data){
     struct Node *newNode;
      newNode=(struct Node *)malloc(sizeof(struct Node));
-     
     struct Node *p;
     p=head;
     newNode->data=data;
@@ -61,11 +60,11 @@ secondNode->next=thirdNode;
 thirdNode->data=55;
 thirdNode->next=NULL;
 traversal(firstNode);
-sort();
-// insertatend(firstNode,45);
+
+insertatend(firstNode,88);
 
 
-// printf("after insertion at end node\n ");
+ printf("after insertion at end node\n ");
 traversal(firstNode);
 
 
