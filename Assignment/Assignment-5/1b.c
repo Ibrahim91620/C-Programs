@@ -9,7 +9,8 @@ struct Node {
 
 
 };
-void display(struct Node *head){
+struct Node *head=NULL;
+void display(){
 
 
 	if(head!=NULL){
@@ -37,50 +38,34 @@ void display(struct Node *head){
 }
 
 
-struct Node *insertatEnd(struct Node *head,int data){
-      struct Node *ptr=(struct Node *)malloc(sizeof(struct Node));
-
-    ptr->data=data;
-    struct Node *p=head;
-    while (p->next!=NULL)
+void insertend(int x){
+    struct Node *newNode;
+    newNode=(struct Node*)malloc(sizeof(struct Node));
+    newNode->data=x;
+    newNode->next=NULL;
+    if (head==NULL)
     {
-       
-       p=p->next;
-      
+        newNode->data=x;
+        head=newNode;
+        
+    }else{
+        struct Node *temp;
+        temp=head;
+        while (temp->next!=NULL)
+        {
+            temp=temp->next;
+        }
+        temp->next=newNode;
+        newNode->next=NULL;
+        
+        
     }
     
-     p->next=ptr;
-    ptr->next=NULL;
-        
-          return head;
-
-
 }
-
 int main(){
-
-    struct Node *head;
-	struct Node *second;
-	struct Node *third;
-	display(head);
-   
-   head =(struct Node *)malloc(sizeof(struct Node));
-   second =(struct Node *)malloc(sizeof(struct Node));
-   third =(struct Node *)malloc(sizeof(struct Node));
-
-   head->data=12;
-   head->next=second;
-
-   second->data=13;
-   second->next=third;
-
-   third->data=14;
-   third->next=NULL;
-   printf("Linked list before Insertion:-\n");
-   display(head);
-  
-    head=insertatEnd(head,23);
-    
+    insertend(24);
+    insertend(12);
+    insertend(25);
 	printf("linked list after insertion:\n");
 	display(head);
 
